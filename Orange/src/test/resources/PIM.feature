@@ -48,7 +48,7 @@ Feature: PIM OrangeHRM
         | Username       | ContactName | Relationship | MobileNumber |
         | kingWarrior    | Pepe        | Friend       | 7892625      |
         | StarlightNinja | Camila      | Mother       | 911          |
-      
+
     @AddPost
     Scenario Outline: Adding a post into Buzz Newsfeed from user profile
       Given I set the username text field with "<Username>"
