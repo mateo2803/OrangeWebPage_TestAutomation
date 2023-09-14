@@ -48,12 +48,40 @@ Feature: PIM OrangeHRM
         | Username       | ContactName | Relationship | MobileNumber |
         | kingWarrior    | Pepe        | Friend       | 7892625      |
         | StarlightNinja | Camila      | Mother       | 911          |
-
+      
     @AddPost
     Scenario Outline: Adding a post into Buzz Newsfeed from user profile
       Given I set the username text field with "<Username>"
       And I set the password text field with "estudianteUPB2023"
-      Then I click on Buzz
+      Then I click on Buzz tab
+      And I set the message field with "<Message>" to post
+      Then I click on Post button
+      Then The post should be displayed
+      And I click on drop down
+      Then I click on logout button
+      Examples:
+        | Username       | Message                                      |
+        | kingWarrior    | Buenas noches, esta es mi presentacion final |
+        | StarlightNinja | Dia de presentacion, nervios!                |
+
+  @ChangePasswordOfUser
+    Scenario Outline: Login and renew password from user created
+      Given I set the username text field with "<Username>"
+      And I set the password text field with "estudianteUPB2023"
+      And I click on drop down
+      Then I click on Change Password
+      And I type my current password
+      Then I set my new password in password field with "<NewPassword>"
+      And I confirm my "<NewPassword>"
+      Then I click on Save button
+      And I click on drop down
+      Then I click on logout button
+      Given I set the username text field with "<Username>"
+      And I set the password text field with "<NewPassword>"
+      Examples:
+        | Username       | NewPassword                   |  |
+        | kingWarrior    | ContraseniaSegura129          |  |
+        | StarlightNinja | estaEsUnaMejorContrasenia2023 |  |
 #  @EditAnEmployee
 #  Scenario: Editing an employee
 #    Given I set the username text field with "Admin"
