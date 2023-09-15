@@ -25,8 +25,8 @@ Feature: PIM OrangeHRM
       Then I click on logout button
       Examples:
         | FirstName | MiddleName | LastName | ID    | Username  |
-        | Mateo     | V          | Mercado  | 71391 | kingWarri |
-#        | Megu      | G          | Villalto | 61461 | StarlightNinja  |
+#        | Mateo     | V          | Mercado  | 71391 | kingWarri |
+        | Megu      | G          | Villalto | 61461 | StarlightNinja  |
 #        | Walter    | T          | Dog      | 62405 | ElectricVoyager |
 #        | Mauricio  | H          | Guevara  | 78152 | LunarWarlock    |
 
@@ -48,8 +48,8 @@ Feature: PIM OrangeHRM
       Then I click on logout button
       Examples:
         | Username  | ContactName | Relationship | MobileNumber |
-        | kingWarri | Pepe        | Friend       | 7892625      |
-#        | StarlightNinja | Camila      | Mother       | 911          |
+#        | kingWarri | Pepe        | Friend       | 7892625      |
+        | StarlightNinja | Camila      | Mother       | 911          |
 
     @AddPost
     Scenario Outline: Adding a post into Buzz Newsfeed from user profile
@@ -65,18 +65,18 @@ Feature: PIM OrangeHRM
       Then I click on logout button
       Examples:
         | Username  | Message                                      |
-        | kingWarri | Buenas noches, esta es mi presentacion final |
-#        | StarlightNinja | Dia de presentacion, nervios!                |
+#        | kingWarri | Buenas noches, esta es mi presentacion final |
+        | StarlightNinja | Dia de presentacion, nervios!                |
 
   @ChangePasswordOfUser
     Scenario Outline: Login and renew password from user created
       Given I set the username text field with "<Username>"
-      And I set the password text field with "ContraseniaSegura129"
+      And I set the password text field with "estudianteUPB2023"
       When I click on the login button
       Then The DashBoard should be displayed
       And I click on drop down
       Then I click on Change Password
-      And I type my current password "ContraseniaSegura129"
+      And I type my current password "estudianteUPB2023"
       Then I set my new password in password field with "<NewPassword>"
       And I confirm my "<NewPassword>"
       Then I click on Save button
@@ -90,5 +90,5 @@ Feature: PIM OrangeHRM
       Then I click on logout button
       Examples:
         | Username  | NewPassword          |  |
-        | kingWarri | ContraseniaSegura130 |  |
-#        | StarlightNinja | estaEsUnaMejorContrasenia2023 |  |
+#        | kingWarri | ContraseniaSegura130 |  |
+        | StarlightNinja | estaEsUnaMejorContrasenia2023 |  |
