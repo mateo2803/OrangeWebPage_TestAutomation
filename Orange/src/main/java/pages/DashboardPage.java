@@ -10,10 +10,11 @@ public class DashboardPage {
 
     @FindBy(className = "oxd-topbar-header-breadcrumb-module")
     WebElement dashboardText;
-    //@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a")
-    //WebElement PIMButton;
     @FindBy(xpath = "//span[text()='PIM']")
     WebElement pimLink;
+
+    @FindBy(xpath = "(//span[@data-v-6475d26d])[3]")
+    WebElement myInfoTab;
     public DashboardPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -25,5 +26,5 @@ public class DashboardPage {
     public void clickonPIMButton(){
         pimLink.click();
     }
-
+    public void clickOnMyInfoTab(){myInfoTab.click();}
 }

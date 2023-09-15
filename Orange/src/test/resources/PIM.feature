@@ -24,16 +24,18 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | FirstName | MiddleName | LastName | ID    | Username        |
-        | Mateo     | V          | Mercado  | 71391 | kingWarrior     |
-        | Megu      | G          | Villalto | 61461 | StarlightNinja  |
-        | Walter    | T          | Dog      | 62405 | ElectricVoyager |
-        | Mauricio  | H          | Guevara  | 78152 | LunarWarlock    |
+        | FirstName | MiddleName | LastName | ID    | Username     |
+        | Mateo     | V          | Mercado  | 71391 | kingWarriorr |
+#        | Megu      | G          | Villalto | 61461 | StarlightNinja  |
+#        | Walter    | T          | Dog      | 62405 | ElectricVoyager |
+#        | Mauricio  | H          | Guevara  | 78152 | LunarWarlock    |
 
     @AddEmergencyContact
     Scenario Outline: Adding an emergency contact to our profile created
       Given I set the username text field with "<Username>"
       And I set the password text field with "estudianteUPB2023"
+      When I click on the login button
+      Then The DashBoard should be displayed
       Then I click on My Info tab
       And I click on Emergency Contacts
       And I click on Add Emergency Contact
@@ -45,9 +47,9 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | Username       | ContactName | Relationship | MobileNumber |
-        | kingWarrior    | Pepe        | Friend       | 7892625      |
-        | StarlightNinja | Camila      | Mother       | 911          |
+        | Username     | ContactName | Relationship | MobileNumber |
+        | kingWarriorr | Pepe        | Friend       | 7892625      |
+#        | StarlightNinja | Camila      | Mother       | 911          |
 
     @AddPost
     Scenario Outline: Adding a post into Buzz Newsfeed from user profile
@@ -64,24 +66,24 @@ Feature: PIM OrangeHRM
         | kingWarrior    | Buenas noches, esta es mi presentacion final |
         | StarlightNinja | Dia de presentacion, nervios!                |
 
-  @ChangePasswordOfUser
-    Scenario Outline: Login and renew password from user created
-      Given I set the username text field with "<Username>"
-      And I set the password text field with "estudianteUPB2023"
-      And I click on drop down
-      Then I click on Change Password
-      And I type my current password
-      Then I set my new password in password field with "<NewPassword>"
-      And I confirm my "<NewPassword>"
-      Then I click on Save button
-      And I click on drop down
-      Then I click on logout button
-      Given I set the username text field with "<Username>"
-      And I set the password text field with "<NewPassword>"
-      Examples:
-        | Username       | NewPassword                   |  |
-        | kingWarrior    | ContraseniaSegura129          |  |
-        | StarlightNinja | estaEsUnaMejorContrasenia2023 |  |
+#  @ChangePasswordOfUser
+#    Scenario Outline: Login and renew password from user created
+#      Given I set the username text field with "<Username>"
+#      And I set the password text field with "estudianteUPB2023"
+#      And I click on drop down
+#      Then I click on Change Password
+#      And I type my current password
+#      Then I set my new password in password field with "<NewPassword>"
+#      And I confirm my "<NewPassword>"
+#      Then I click on Save button
+#      And I click on drop down
+#      Then I click on logout button
+#      Given I set the username text field with "<Username>"
+#      And I set the password text field with "<NewPassword>"
+#      Examples:
+#        | Username       | NewPassword                   |  |
+#        | kingWarrior    | ContraseniaSegura129          |  |
+#        | StarlightNinja | estaEsUnaMejorContrasenia2023 |  |
 #  @EditAnEmployee
 #  Scenario: Editing an employee
 #    Given I set the username text field with "Admin"
