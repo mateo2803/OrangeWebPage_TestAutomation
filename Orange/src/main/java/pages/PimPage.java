@@ -18,12 +18,6 @@ public class PimPage {
     WebElement employeeNameTextBox;
     @FindBy(className = "orangehrm-left-space")
     WebElement buttonSearch;
-   // @FindBy(className = "data")
-    //List<WebElement> dataNames;
-   //@FindBy(xpath = "//div[@class='data']")
-    //List<WebElement> dataElement;
-    //@FindBy(className = "bi-trash")
-    //WebElement deleteButton;
    @FindBy(xpath = "(//button[@data-v-10d463b7])[3]")
    WebElement AddButton;
    @FindBy(className = "bi-pencil-fill")

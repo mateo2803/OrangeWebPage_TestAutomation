@@ -1,12 +1,9 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
-import pages.DashboardPage;
-import pages.LoginPage;
 import pages.PimPage;
 import pages.PimPageAdd;
 import utilities.DriverManager;

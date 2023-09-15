@@ -24,8 +24,8 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | FirstName | MiddleName | LastName | ID    | Username     |
-        | Mateo     | V          | Mercado  | 71391 | kingWarriorr |
+        | FirstName | MiddleName | LastName | ID    | Username   |
+        | Mateo     | V          | Mercado  | 71391 | kingWarrio |
 #        | Megu      | G          | Villalto | 61461 | StarlightNinja  |
 #        | Walter    | T          | Dog      | 62405 | ElectricVoyager |
 #        | Mauricio  | H          | Guevara  | 78152 | LunarWarlock    |
@@ -47,14 +47,16 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | Username     | ContactName | Relationship | MobileNumber |
-        | kingWarriorr | Pepe        | Friend       | 7892625      |
+        | Username   | ContactName | Relationship | MobileNumber |
+        | kingWarrio | Pepe        | Friend       | 7892625      |
 #        | StarlightNinja | Camila      | Mother       | 911          |
 
     @AddPost
     Scenario Outline: Adding a post into Buzz Newsfeed from user profile
       Given I set the username text field with "<Username>"
       And I set the password text field with "estudianteUPB2023"
+      When I click on the login button
+      Then The DashBoard should be displayed
       Then I click on Buzz tab
       And I set the message field with "<Message>" to post
       Then I click on Post button
@@ -62,9 +64,9 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | Username       | Message                                      |
-        | kingWarrior    | Buenas noches, esta es mi presentacion final |
-        | StarlightNinja | Dia de presentacion, nervios!                |
+        | Username   | Message                                      |
+        | kingWarrio | Buenas noches, esta es mi presentacion final |
+#        | StarlightNinja | Dia de presentacion, nervios!                |
 
 #  @ChangePasswordOfUser
 #    Scenario Outline: Login and renew password from user created
@@ -86,55 +88,3 @@ Feature: PIM OrangeHRM
 #        | Username       | NewPassword                   |  |
 #        | kingWarrior    | ContraseniaSegura129          |  |
 #        | StarlightNinja | estaEsUnaMejorContrasenia2023 |  |
-#  @EditAnEmployee
-#  Scenario: Editing an employee
-#    Given I set the username text field with "Admin"
-#    And I set the password text field with "admin123"
-#    When I click on the login button
-#    Then The DashBoard should be displayed
-#    Given I click on PIM
-#    And I set the employee text with "Alexander V"
-#    Then I click on the search button
-#    Then I click on edit button
-#    Then I change the first name to "Julian"
-#    And I change the middle name to "A"
-#    And I change the last name to "M"
-#    And I set the nickname to "Juliansito"
-#    Then I click on the save button to save the changes
-#    And The message success should be displayed
-#    And I click on drop down
-#    Then I click on logout button
-#
-#
-#  @FindAnEmployee
-#  Scenario Outline: Looking for employees
-#    Given I set the username text field with "Admin"
-#    And I set the password text field with "admin123"
-#    When I click on the login button
-#    Then The DashBoard should be displayed
-#    Given I click on PIM
-#    And I set the employee text with "<name>"
-#    Then I click on the search button
-#    And The name of "<name>" should be displayed
-#    And I click on drop down
-#    Then I click on logout button
-#    Examples:
-#      | name        |
-#      | Ferrufino J |
-#      | Antonio V   |
-#      | Julian A    |
-#
-#  @DeleteAnEmployee
-#  Scenario: Delete an employee
-#    Given I set the username text field with "Admin"
-#    And I set the password text field with "admin123"
-#    When I click on the login button
-#    Then The DashBoard should be displayed
-#    Given I click on PIM
-#    And I set the employee text with "Antonio V"
-#    Then I click on the search button
-#    And I click on trash button
-#    Then I click in Yes, Delete
-#    Then The name of "Antonio V" should not be displayed
-#    And I click on drop down
-#    Then I click on logout buttonSearch
