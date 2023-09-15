@@ -4,9 +4,9 @@
 
 ## How to test it
 Follow the steps below to run the proyect:
-1. Open Orange/src/
-2. Go to test/resources
-3. Open PIM.feature in the IDE of your preference
+1. Open 'Orange/src/'
+2. Go to 'test/resources'
+3. Open 'PIM.feature' in the IDE of your preference
 4. Read the following scenarios and modify the user's data
 5. Run the project.
 
