@@ -80,6 +80,8 @@ Feature: PIM OrangeHRM
 #      Then I click on logout button
 #      Given I set the username text field with "<Username>"
 #      And I set the password text field with "<NewPassword>"
+#      And I click on drop down
+#      Then I click on logout button
 #      Examples:
 #        | Username       | NewPassword                   |  |
 #        | kingWarrior    | ContraseniaSegura129          |  |

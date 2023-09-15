@@ -12,9 +12,10 @@ public class DashboardPage {
     WebElement dashboardText;
     @FindBy(xpath = "//span[text()='PIM']")
     WebElement pimLink;
-
     @FindBy(xpath = "(//span[@data-v-6475d26d])[3]")
     WebElement myInfoTab;
+    @FindBy(xpath = "(//span[@data-v-6475d26d])[8]")
+    WebElement buzzFeed;
     public DashboardPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -27,4 +28,5 @@ public class DashboardPage {
         pimLink.click();
     }
     public void clickOnMyInfoTab(){myInfoTab.click();}
+    public void clickOnBuzzFeed(){buzzFeed.click();}
 }
