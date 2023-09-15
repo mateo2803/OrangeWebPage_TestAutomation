@@ -47,11 +47,12 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | Username  | ContactName | Relationship | MobileNumber |
+        | Username        | ContactName | Relationship | MobileNumber |
 #        | kingWarri | Pepe        | Friend       | 7892625      |
-        | StarlightNinja | Camila      | Mother       | 911          |
+        | StarlightNinja  | Camila      | Mother       | 911          |
+        | ElectricVoyager | Juan        | Brother      | 826111       |
 
-    @AddPost
+  @AddPost
     Scenario Outline: Adding a post into Buzz Newsfeed from user profile
       Given I set the username text field with "<Username>"
       And I set the password text field with "estudianteUPB2023"
@@ -64,9 +65,10 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | Username  | Message                                      |
+        | Username        | Message                       |
 #        | kingWarri | Buenas noches, esta es mi presentacion final |
-        | StarlightNinja | Dia de presentacion, nervios!                |
+        | StarlightNinja  | Dia de presentacion, nervios! |
+        | ElectricVoyager | Este es mi proyecto final :D  |
 
   @ChangePasswordOfUser
     Scenario Outline: Login and renew password from user created
@@ -89,6 +91,7 @@ Feature: PIM OrangeHRM
       And I click on drop down
       Then I click on logout button
       Examples:
-        | Username  | NewPassword          |  |
+        | Username        | NewPassword                    |  |
 #        | kingWarri | ContraseniaSegura130 |  |
-        | StarlightNinja | estaEsUnaMejorContrasenia2023 |  |
+        | StarlightNinja  | estaEsUnaMejorContrasenia2023  |  |
+        | ElectricVoyager | contraseniaSeguraClaroQueSi123 |
