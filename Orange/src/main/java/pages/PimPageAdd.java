@@ -14,8 +14,6 @@ import java.time.Duration;
 
 public class PimPageAdd {
     WebDriver driver;
-    //@FindBy(name = "firstName")
-    //WebElement firstNameTextBox;
     @FindBy(name = "lastName")
     WebElement lastNameTextBox;
     @FindBy(name = "middleName")
